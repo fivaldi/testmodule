@@ -1,0 +1,25 @@
+document: modulemd
+version: 0
+data:
+        name: httpd24
+        version: 2.4.18-1
+        summary: Apache HTTP server
+        description: >
+                The Apache HTTP Server is a powerful, efficient, and extensible
+                web server.
+        license:
+                module:
+                       - MIT
+                content: [] # This list needs to be populad by pungi
+        requires:
+                core: 0
+        references:
+                community: http://httpd.apache.org/
+                documentation: http://httpd.apache.org/docs/2.4/
+                tracker: https://bz.apache.org/bugzilla/
+        components:
+                rpms:
+                        dependencies: True
+                        fulltree: True
+                        packages:
+                                httpd: {}
