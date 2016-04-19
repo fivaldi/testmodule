@@ -2,11 +2,10 @@ document: modulemd
 version: 0
 data:
         name: testmodule
-        version: 2.4.18-13
-        summary: A test module with the Apache HTTP server
+        version: 2.4.18-14
+        summary: A test module
         description: >
-                The Apache HTTP Server is a powerful, efficient, and extensible
-                web server.
+                Fragile, handle with care!
         license:
                 module:
                        - MIT
