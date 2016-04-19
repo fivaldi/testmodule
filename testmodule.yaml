@@ -2,8 +2,8 @@ document: modulemd
 version: 0
 data:
         name: httpd24
-        version: 2.4.18-11
-        summary: Apache HTTP server
+        version: 2.4.18-12
+        summary: A test module with the Apache HTTP server
         description: >
                 The Apache HTTP Server is a powerful, efficient, and extensible
                 web server.
