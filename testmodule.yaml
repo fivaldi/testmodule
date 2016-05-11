@@ -2,24 +2,38 @@ document: modulemd
 version: 0
 data:
         name: testmodule
-        version: 2.4.18-19
+        version: 1.0
+        release: 1
         summary: A test module
         description: >
-                Fragile, handle with care!
+                A module for the demonstration of the metadata format. Also,
+                the obligatory lorem ipsum dolor sit amet goes right here.
         license:
                 module:
-                       - MIT
-                content: [] # This list needs to be populad by pungi
-        requires:
-                core: 0
+                        - MIT
+                content: []
+        xmd: ~
+        dependencies:
+                buildrequires:
+                        core: 23
+                        c-build: 6.0
+                requires:
+                        core: 23
         references:
-                community: http://httpd.apache.org/
-                documentation: http://httpd.apache.org/docs/2.4/
-                tracker: https://bz.apache.org/bugzilla/
+                community: http://www.example.com/
+                documentation: http://www.example.com/
+                tracker: http://www.example.com/
         components:
                 rpms:
                         dependencies: True
                         fulltree: True
                         packages:
-                                httpd: {}
-                                tidy: {}
+                                bar:
+                                        repository: https://pagure.io/bar.git
+                                        cache: https://example.com/cache
+                                        commit: 26ca0c0
+                                baz: ~
+                                xxx:
+                                        arches: [ i686, x86_64 ]
+                                        multilib: [ x86_64 ]
+                                xyz: ~
