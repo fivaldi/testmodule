@@ -1,39 +1,36 @@
 document: modulemd
 version: 0
 data:
-        name: testmodule
-        version: 1.0
-        release: 1
-        summary: A test module
-        description: >
-                A module for the demonstration of the metadata format. Also,
-                the obligatory lorem ipsum dolor sit amet goes right here.
-        license:
-                module:
-                        - MIT
-                content: []
-        xmd: ~
-        dependencies:
-                buildrequires:
-                        core: 23
-                        c-build: 6.0
-                requires:
-                        core: 23
-        references:
-                community: http://www.example.com/
-                documentation: http://www.example.com/
-                tracker: http://www.example.com/
-        components:
-                rpms:
-                        dependencies: True
-                        fulltree: True
-                        packages:
-                                bar:
-                                        repository: https://pagure.io/bar.git
-                                        cache: https://example.com/cache
-                                        commit: 26ca0c0
-                                baz: ~
-                                xxx:
-                                        arches: [ i686, x86_64 ]
-                                        multilib: [ x86_64 ]
-                                xyz: ~
+    name: testmodule
+    version: 4.3.42
+    release: 1
+    summary: A test module containing the bash shell
+    description: >
+        A module for the demonstration of the metadata format. Also,
+        the obligatory lorem ipsum dolor sit amet goes right here.
+    license:
+        module:
+            - MIT
+        content: []
+    xmd: ~
+    dependencies:
+        buildrequires:
+            core: 23
+            c-build: 6.0
+        requires:
+            core: 23
+    references:
+        community: http://www.example.com/
+        documentation: http://www.example.com/
+        tracker: http://www.example.com/
+    profiles:
+        default:
+            rpms:
+                - bash
+    components:
+        rpms:
+            api:
+                - bash
+            packages:
+                bash:
+                    rationale: A popular shell.
