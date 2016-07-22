@@ -23,12 +23,11 @@ data:
     profiles:
         default:
             rpms:
-                - gdb
+                - bash
     components:
         rpms:
             api:
-                - gdb
+                - bash
             packages:
-                gdb:
+                bash:
                     rationale: A popular debugger.
-                    commit: d6851d1cc9872fbce65f00e347a232b413334e31
