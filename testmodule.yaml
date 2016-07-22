@@ -3,7 +3,7 @@ version: 0
 data:
     name: testmodule
     version: 4.3.43
-    release: 2
+    release: 3
     summary: A test module containing the bash shell
     description: >
         A module for the demonstration of the metadata format. Also,
@@ -15,10 +15,8 @@ data:
     xmd: ~
     dependencies:
         buildrequires:
-            core: 23
-            c-build: 6.0
+            fakemodulebuild: 1.0-0
         requires:
-            core: 23
     references:
         community: http://www.example.com/
         documentation: http://www.example.com/
@@ -26,11 +24,12 @@ data:
     profiles:
         default:
             rpms:
-                - bash
+                - gdb
     components:
         rpms:
             api:
-                - bash
+                - gdb
             packages:
-                bash:
-                    rationale: A popular shell.
+                gdb:
+                    rationale: A popular debugger.
+                    commit: d6851d1cc9872fbce65f00e347a232b413334e31
