@@ -16,7 +16,6 @@ data:
     dependencies:
         buildrequires:
             fakemodulebuild: 1.0-0
-        requires:
     references:
         community: http://www.example.com/
         documentation: http://www.example.com/
