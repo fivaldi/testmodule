@@ -1,33 +1,26 @@
-document: modulemd
-version: 0
+document: modulemd #Document type identifier
+version: 0 #Version of the yaml
 data:
-    name: testmodule
-    version: 4.3.43
-    release: 29
-    summary: A test module containing the bash shell
-    description: >
-        A module for the demonstration of the metadata format. Also,
-        the obligatory lorem ipsum dolor sit amet goes right here.
+    name: testmodule #name of the module
+    version: 4.2.5.2 #module version
+    release: 1 #module release
+    summary: "Ruby on Rails" #Summary of the httpd module; each word is a keyword for the module database search
+    description: "Rails is a web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern."
     license:
-        module:
-            - MIT
-        content: []
-    xmd: ~
+         module: [ MIT ] #license of the httpd module yaml file
+         content: #Content license: list of licenses used by the packages in the module
+             - MIT
     dependencies:
-        buildrequires:
-            fakemodulebuild: 1.0-0
+        buildrequires: { fakemodulebuild: 1.0-0 }
     references:
-        community: http://www.example.com/
-        documentation: http://www.example.com/
-        tracker: http://www.example.com/
-    profiles:
-        default:
-            rpms:
-                - bash
+        community: http://rubyonrails.org/ #Upstream community
+        documentation: http://guides.rubyonrails.org/ #Upstream documentation
     components:
         rpms:
             api:
-                - bash
+                - rails
             packages:
-                bash:
-                    rationale: A popular debugger.
+                rubygem-rails: #package included in the module
+                    rationale: Basic Ruby on Rails package #The rationale answers: Why do we need this?
+                    #Since we want to use the build system configuration repository and the build system lookalike
+                    #cache, we don't want to fill out the 'repository' or 'cache' fields
