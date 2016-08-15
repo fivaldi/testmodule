@@ -3,7 +3,7 @@ version: 0
 data:
     name: testmodule
     version: 4.3.43
-    release: 29
+    release: 30
     summary: A test module containing the bash shell
     description: >
         A module for the demonstration of the metadata format. Also,
@@ -17,9 +17,8 @@ data:
         buildrequires:
             fakemodulebuild: 1.0-0
     references:
-        community: http://www.example.com/
-        documentation: http://www.example.com/
-        tracker: http://www.example.com/
+        community: https://fedoraproject.org/wiki/Modularity
+        tracker: https://taiga.fedorainfracloud.org/project/modularity
     profiles:
         default:
             rpms:
@@ -30,4 +29,4 @@ data:
                 - bash
             packages:
                 bash:
-                    rationale: A popular debugger.
+                    rationale: It's here to test the whole thing!
