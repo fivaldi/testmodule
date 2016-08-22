@@ -2,8 +2,8 @@ document: modulemd
 version: 0
 data:
     name: testmodule
-    version: 4.3.43
-    release: 31
+    version: 4.3.44
+    release: 0
     summary: A test module containing the bash shell
     description: >
         A module for the demonstration of the metadata format. Also,
@@ -15,7 +15,7 @@ data:
     xmd: ~
     dependencies:
         buildrequires:
-            fakemodulebuild: 1.0-0
+            base_runtime: 1.0-0
     references:
         community: https://fedoraproject.org/wiki/Modularity
         tracker: https://taiga.fedorainfracloud.org/project/modularity
