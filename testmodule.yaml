@@ -3,7 +3,7 @@ version: 0
 data:
     name: testmodule
     version: 4.3.44
-    release: 0
+    release: 1
     summary: A test module containing the bash shell
     description: >
         A module for the demonstration of the metadata format. Also,
@@ -30,3 +30,4 @@ data:
             packages:
                 bash:
                     rationale: It's here to test the whole thing!
+                    commit: 70fa7516b83768595a4f3280ae890a7ac957e0c7
