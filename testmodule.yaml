@@ -2,7 +2,7 @@ document: modulemd
 version: 0
 data:
     name: testmodule
-    version: 4.3.45
+    version: 4.3.46
     release: 5
     summary: A test module containing the bash shell
     description: >
@@ -15,7 +15,7 @@ data:
     xmd: ~
     dependencies:
         buildrequires:
-            base_runtime: 1.0-0
+            base-runtime: 0.25-1
     references:
         community: https://fedoraproject.org/wiki/Modularity
         tracker: https://taiga.fedorainfracloud.org/project/modularity
