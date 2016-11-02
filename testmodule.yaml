@@ -3,7 +3,7 @@ version: 0
 data:
     name: testmodule
     version: 4.3.47
-    release: 5
+    release: 6
     summary: A test module containing the bash shell
     description: >
         A module for the demonstration of the metadata format. Also,
@@ -15,7 +15,8 @@ data:
     xmd: ~
     dependencies:
         buildrequires:
-            base-runtime: 0.25-1
+            # 0.25-11 is the fake hand-imported base-runtime.
+            base-runtime: 0.25-11
     references:
         community: https://fedoraproject.org/wiki/Modularity
         tracker: https://taiga.fedorainfracloud.org/project/modularity
