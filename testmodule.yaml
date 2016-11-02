@@ -3,7 +3,7 @@ version: 0
 data:
     name: testmodule
     version: 4.3.47
-    release: 7
+    release: 8
     summary: A test module containing the bash shell
     description: >
         A module for the demonstration of the metadata format. Also,
