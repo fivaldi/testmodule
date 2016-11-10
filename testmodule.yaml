@@ -1,34 +1,36 @@
 document: modulemd
-version: 0
+version: 1
 data:
-    name: testmodule
-    version: 4.3.47
-    release: 8
-    summary: A test module containing the bash shell
-    description: >
-        A module for the demonstration of the metadata format. Also,
-        the obligatory lorem ipsum dolor sit amet goes right here.
+    summary: A test module in all its beauty
+    description: This module demonstrates how to write simple modulemd files And can be used for testing the build and release pipeline.
     license:
-        module:
-            - MIT
-        content: []
-    xmd: ~
+        module: [ MIT ]
     dependencies:
         buildrequires:
-            # 0.25-11 is the fake hand-imported base-runtime.
-            base-runtime: 0.25-11
+            base-runtime: '0.25'
+        requires:
+            base-runtime: '0.25'
     references:
         community: https://fedoraproject.org/wiki/Modularity
+        documentation: https://fedoraproject.org/wiki/Fedora_Packaging_Guidelines_for_Modules
         tracker: https://taiga.fedorainfracloud.org/project/modularity
     profiles:
         default:
             rpms:
-                - bash
+                - tangerine
+    api:
+        rpms:
+            - perl-Tangerine
+            - tangerine
     components:
         rpms:
-            api:
-                - bash
-            packages:
-                bash:
-                    rationale: It's here to test the whole thing!
-                    commit: 70fa7516b83768595a4f3280ae890a7ac957e0c7
+            perl-List-Compare:
+                rationale: A dependency of tangerine.
+                ref: f25
+            perl-Tangerine:
+                rationale: Provides API for this module and is a dependency of tangerine.
+                ref: f25
+            tangerine:
+                rationale: Provides API for this module.
+                buildorder: 10
+                ref: f25
