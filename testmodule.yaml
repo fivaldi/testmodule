@@ -7,9 +7,9 @@ data:
         module: [ MIT ]
     dependencies:
         buildrequires:
-            base-runtime: '0.25'
+            base-runtime: master
         requires:
-            base-runtime: '0.25'
+            base-runtime: master
     references:
         community: https://fedoraproject.org/wiki/Modularity
         documentation: https://fedoraproject.org/wiki/Fedora_Packaging_Guidelines_for_Modules
